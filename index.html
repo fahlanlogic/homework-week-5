@@ -25,7 +25,7 @@
           <a href="#list_registrants"
             class="hover:bg-zinc-700 hover:text-white hover:font-semibold cursor-pointer py-2 px-3 w-1/2 text-center border-b-2 transition duration-300 ease-in-out">
             <li>
-              Table
+              List Pendaftar
             </li>
           </a>
         </ul>
@@ -36,13 +36,13 @@
     <div id="registrasi" class="h-screen flex justify-center items-center px-4">
       <div class="w-full relative md:w-2/3 xl:w-1/3">
         <h1 class="text-4xl mb-4 font-bold text-center">Register</h1>
-        <p class="mb-10 font-light text-center text-sm">Fill the form below to register</p>
+        <p class="mb-10 font-light text-center text-sm">Isi formulir di bawah ini untuk mendaftar</p>
         <form class="px-6 py-6 rounded-lg border shadow-lg">
           <div class="flex flex-col gap-8">
             <div class="flex flex-col">
               <div class="flex justify-between items-end">
                 <label for="name">Nama</label>
-                <span id="alert_name" class="font-light text-xs">*min 10 char</span>
+                <span id="alert_name" class="font-light text-xs">*min 10 karakter</span>
               </div>
               <input id="name" name="name" type="text" min="10" required
                 class="border-b border-zinc-300 py-1 focus:outline-none font-semibold">
@@ -50,7 +50,7 @@
             <div class="flex flex-col">
               <div class="flex justify-between items-end">
                 <label for="age">Umur</label>
-                <span class="font-light text-xs">*min 25 th</span>
+                <span class="font-light text-xs">*min 25 tahun</span>
               </div>
               <div class="flex gap-2 items-end">
                 <input id="age" name="age" type="number" min="25" required
@@ -61,7 +61,7 @@
             <div class="flex flex-col">
               <div class="flex justify-between items-end">
                 <label for="money">Uang Sangu</label>
-                <span class="font-light text-xs">*between 100.000 - 1.000.000</span>
+                <span class="font-light text-xs">*diantara 100.000 - 1.000.000</span>
               </div>
               <div class="flex gap-2 items-end">
                 <input id="money" name="money" type="number" step="50000" min="100000" max="1000000" required
@@ -70,9 +70,9 @@
               </div>
             </div>
             <div class="flex mt-4 gap-5 justify-between items-center">
-              <span class="font-light text-sm">Make sure all forms are filled out correctly according to the provisions (*)</span>
+              <span class="font-light text-sm">Pastikan semua formulir diisi dengan benar sesuai ketentuan (*)</span>
               <button id="button" type="button" onclick="handleSubmit()"
-                class="bg-zinc-700 text-white rounded-md py-1 px-3 hover:bg-zinc-500 transition duration-300">Submit</bu>
+                class="bg-zinc-700 text-white rounded-md py-1 px-3 hover:opacity-70 transition duration-300">Submit</bu>
             </div>
           </div>
         </form>
@@ -90,7 +90,7 @@
     </div>
     <div id="list_registrants" class="h-screen flex justify-center px-4">
       <div class="w-full md:w-2/3">
-        <h1 class="text-center font-bold text-3xl mt-20 mb-10 lg:text-4xl lg:mb-18 lg:mt-28">List of Registrants</h1>
+        <h1 class="text-center font-bold text-3xl mt-20 mb-10 lg:text-4xl lg:mb-18 lg:mt-28">List Pendaftar</h1>
         <table class="table-auto w-full">
           <thead class="bg-zinc-700 text-white">
             <tr>
@@ -99,18 +99,20 @@
               <th class="py-3 px-4">Uang Sangu</th>
             </tr>
           </thead>
-          <tbody>
-            <tr class="border-b border-zinc-300">
+          <tbody id="table_body">
+            <!-- <tr class="border-b border-zinc-300">
               <td class="py-3 border-r border-zinc-300 px-4">The Sliding Mr. Bones (Next Stop, Pottersville)</td>
               <td class="text-center py-3 border-r border-zinc-300 px-4">25 Tahun</td>
               <td class="text-center py-3 px-4">1000000</td>
-            </tr>
+            </tr> -->
           </tbody>
         </table>
         <div class="mt-16 border shadow-md p-4 rounded-md bg-zinc-700 text-white">
           <h3 class="text-xl font-semibold mb-4">Resume</h3>
-          <p class="">Rata-rata pendaftar memiliki uang sangu sebesar [nilai rata rata uang sangu] dengan rata-rata umur
-            [nilai rata-rata umur]</p>
+          <p class="">Rata-rata pendaftar memiliki uang sangu sebesar <span id="dot_money">...</span><strong
+              id="avr_money"></strong>
+            dengan
+            rata-rata umur <span id="dot_age">...</span><strong id="avr_age"></strong> tahun</p>
         </div>
       </div>
     </div>
