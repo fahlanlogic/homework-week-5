@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,23 +13,27 @@
 </head>
 <body>
   <header>
-    <nav class="relative z-50 bg-white">
-      <div class="fixed top-0 left-0 right-0">
+    <nav class="relative z-50">
+      <div class="fixed top-0 left-0 right-0 bg-white">
         <ul class="flex justify-center item-center text-slate-700">
-          <li
+          <a href="#registrasi"
             class="hover:bg-zinc-700 hover:text-white hover:font-semibold cursor-pointer py-2 px-3 w-1/2 text-center border-b-2 transition duration-300 ease-in-out">
-            <a href="#register"></a>Registrasi
-          </li>
-          <li
+            <li>
+              Registrasi
+            </li>
+          </a>
+          <a href="#list_registrants"
             class="hover:bg-zinc-700 hover:text-white hover:font-semibold cursor-pointer py-2 px-3 w-1/2 text-center border-b-2 transition duration-300 ease-in-out">
-            <a href="#table"></a>Table
-          </li>
+            <li>
+              Table
+            </li>
+          </a>
         </ul>
       </div>
     </nav>
   </header>
   <main>
-    <div id="register" class="h-screen flex justify-center items-center px-4">
+    <div id="registrasi" class="h-screen flex justify-center items-center px-4">
       <div class="w-full md:w-2/3 xl:w-1/3">
         <h1 class="text-4xl mb-4 font-bold text-center">Register</h1>
         <p class="mb-10 font-light text-center text-sm">Fill the form below to register</p>
@@ -63,6 +67,32 @@
             </div>
           </div>
         </form>
+      </div>
+    </div>
+    <div id="list_registrants" class="h-screen flex justify-center px-4">
+      <div class="w-full md:w-2/3">
+        <h1 class="text-center font-bold text-3xl mt-20 mb-10 lg:text-4xl lg:mb-18 lg:mt-28">List of Registrants</h1>
+        <table class="table-auto w-full">
+          <thead class="bg-zinc-700 text-white">
+            <tr>
+              <th class="py-3 px-4">Nama</th>
+              <th class="py-3 px-4">Umur</th>
+              <th class="py-3 px-4">Uang Sangu</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="border-b border-zinc-300">
+              <td class="py-3 border-r border-zinc-300 px-4">The Sliding Mr. Bones (Next Stop, Pottersville)</td>
+              <td class="text-center py-3 border-r border-zinc-300 px-4">25 Tahun</td>
+              <td class="text-center py-3 px-4">1000000</td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="mt-16 border shadow-md p-4 rounded-md bg-zinc-700 text-white">
+          <h3 class="text-xl font-semibold mb-4">Resume</h3>
+          <p class="">Rata-rata pendaftar memiliki uang sangu sebesar [nilai rata rata uang sangu] dengan rata-rata umur
+            [nilai rata-rata umur]</p>
+        </div>
       </div>
     </div>
   </main>
