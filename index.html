@@ -64,19 +64,28 @@
                 <span class="font-light text-xs">*between 100.000 - 1.000.000</span>
               </div>
               <div class="flex gap-2 items-end">
-                <input id="money" name="money" type="number" min="100000" max="1000000" required
+                <input id="money" name="money" type="number" step="50000" min="100000" max="1000000" required
                   class="border-b border-zinc-300 grow py-1 focus:outline-none font-semibold">
                 <span class="w-12">rupiah</span>
               </div>
             </div>
             <div class="flex mt-4 gap-5 justify-between items-center">
               <span class="font-light text-sm">Make sure all forms are filled out correctly according to the provisions (*)</span>
-              <button type="button" onclick="handleSubmit()"
+              <button id="button" type="button" onclick="handleSubmit()"
                 class="bg-zinc-700 text-white rounded-md py-1 px-3 hover:bg-zinc-500 transition duration-300">Submit</bu>
             </div>
           </div>
         </form>
-        <p id="status_submit" class="text-center mt-10 absolute left-1/2 -translate-x-1/2"></p>
+        <p id="status_submit" class="text-center mt-10 absolute left-1/2 -translate-x-1/2 w-full text-zinc-700"></p>
+        </div>
+        <div id="arrow" class="opacity-0">
+          <svg xmlns="http://www.w3.org/2000/svg"
+            class="text-center w-8 animate-bounce absolute bottom-2 left-1/2 -translate-x-1/2 text-zinc-700" data-name="Layer 1"
+            viewBox="0 0 32 32" id="down-arrow">
+            <path
+              d="M16 22a2 2 0 0 1-1.41-.59l-10-10a2 2 0 0 1 2.82-2.82L16 17.17l8.59-8.58a2 2 0 0 1 2.82 2.82l-10 10A2 2 0 0 1 16 22Z">
+            </path>
+          </svg>
       </div>
     </div>
     <div id="list_registrants" class="h-screen flex justify-center px-4">
